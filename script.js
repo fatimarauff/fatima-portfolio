@@ -20,7 +20,7 @@ const projects = [
     title: "Synaptix Studio",
     category: "BRAND IDENTITY / DIGITAL",
     year: "2026",
-    image: "",
+    image: "assets/images/project-2/synaptix-office.png",
     link: "project-2.html"
   },
   {
@@ -41,32 +41,33 @@ const projects = [
   }
 ];
 
-// Build project cards automatically
+// Build project cards automatically (homepage only)
 const grid = document.getElementById("projectGrid");
 const template = document.getElementById("projectTemplate");
 
-projects.forEach((project) => {
-  const node = template.content.cloneNode(true);
-  const card = node.querySelector(".project-card");
-  const link = node.querySelector(".project-link");
-  const img = node.querySelector(".project-image");
-  const placeholder = node.querySelector(".project-placeholder");
+if (grid && template) {
+  projects.forEach((project) => {
+    const node = template.content.cloneNode(true);
+    const link = node.querySelector(".project-link");
+    const img = node.querySelector(".project-image");
+    const placeholder = node.querySelector(".project-placeholder");
 
-  node.querySelector(".project-number").textContent = `(${project.number})`;
-  node.querySelector(".project-title").textContent = project.title;
-  node.querySelector(".project-category").textContent = project.category;
-  node.querySelector(".project-year").textContent = project.year;
-  link.href = project.link || "#";
+    node.querySelector(".project-number").textContent = `(${project.number})`;
+    node.querySelector(".project-title").textContent = project.title;
+    node.querySelector(".project-category").textContent = project.category;
+    node.querySelector(".project-year").textContent = project.year;
+    link.href = project.link || "#";
 
-  if (project.image) {
-    img.src = project.image;
-    img.alt = project.title;
-    img.style.display = "block";
-    placeholder.style.display = "none";
-  }
+    if (project.image) {
+      img.src = project.image;
+      img.alt = project.title;
+      img.style.display = "block";
+      placeholder.style.display = "none";
+    }
 
-  grid.appendChild(node);
-});
+    grid.appendChild(node);
+  });
+}
 
 // Header blur
 const header = document.getElementById("siteHeader");
@@ -87,15 +88,19 @@ let ringY = mouseY;
 window.addEventListener("mousemove", (e) => {
   mouseX = e.clientX;
   mouseY = e.clientY;
-  dot.style.left = mouseX + "px";
-  dot.style.top = mouseY + "px";
+  if (dot) {
+    dot.style.left = mouseX + "px";
+    dot.style.top = mouseY + "px";
+  }
 });
 
 function animateCursor() {
   ringX += (mouseX - ringX) * 0.14;
   ringY += (mouseY - ringY) * 0.14;
-  ring.style.left = ringX + "px";
-  ring.style.top = ringY + "px";
+  if (ring) {
+    ring.style.left = ringX + "px";
+    ring.style.top = ringY + "px";
+  }
   requestAnimationFrame(animateCursor);
 }
 animateCursor();
