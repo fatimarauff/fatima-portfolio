@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Fatima Rauf — visual designer and science communicator." />
+  <title>Fatima Rauf — Visual Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="cursor cursor-dot"></div>
+  <div class="cursor cursor-ring"></div>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand magnetic" href="#top">FATIMA RAUF</a>
+
+    <div class="header-center">
+      <span class="status-dot"></span>
+      <span>AVAILABLE FOR SELECT PROJECTS</span>
+    </div>
+
+    <nav class="nav">
+      <a class="magnetic" href="#work">WORK</a>
+      <a class="magnetic" href="#about">ABOUT</a>
+      <a class="magnetic" href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section" data-section="hero">
+      <div class="hero-index mono">(01)</div>
+      <h1 class="hero-title reveal">
+        <span>VISUAL</span>
+        <span class="indent">DESIGNER</span>
+        <span>TURNING IDEAS</span>
+        <span class="indent-sm">INTO VISUALS.</span>
+      </h1>
+
+      <div class="hero-footer">
+        <p class="mono">SCIENCE × DESIGN × COMMUNICATION</p>
+        <p class="mono align-right">ISLAMABAD, PAKISTAN<br/>© 2026</p>
+      </div>
+      <div class="asterisk spin">✳</div>
+    </section>
+
+    <section class="work section" id="work" data-section="work">
+      <div class="section-topline">
+        <span class="mono">(02)</span>
+        <span class="mono">SELECTED WORK</span>
+        <span class="mono">SCROLL TO EXPLORE</span>
+      </div>
+
+      <div id="projectGrid" class="project-grid"></div>
+    </section>
+
+    <section class="statement section" data-section="statement">
+      <div class="statement-rule"></div>
+      <p class="mono statement-kicker">MY APPROACH</p>
+
+      <div class="statement-copy">
+        <span>Design with</span>
+        <span class="outline-word">clarity,</span>
+        <span>curiosity</span>
+        <span>and purpose.</span>
+      </div>
+
+      <div class="small-cursor-demo">
+        <span class="demo-dot"></span>
+        <span class="mono">MOVE WITH INTENT</span>
+      </div>
+    </section>
+
+    <section class="about section" id="about" data-section="about">
+      <div class="section-topline">
+        <span class="mono">(03)</span>
+        <span class="mono">ABOUT</span>
+        <span class="mono">SCIENCE + VISUAL THINKING</span>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-title">
+          <h2>A background in science,</h2>
+          <h2>an eye for visual systems.</h2>
+        </div>
+
+        <div class="about-copy">
+          <p class="lead">
+            I have a background in science. I enjoy taking ideas — particularly complicated ones —
+            and finding ways to make them clearer, more engaging and visually memorable.
+          </p>
+
+          <div class="about-columns">
+            <p>
+              My work moves across visual communication, scientific storytelling,
+              brand systems and digital design.
+            </p>
+            <p>
+              The combination is simple: rigorous thinking with enough curiosity
+              to make complex work feel approachable, human and memorable.
+            </p>
+          </div>
+        </div>
+
+        <div class="portrait-placeholder hover-target">
+          <div class="portrait-circle circle-one"></div>
+          <div class="portrait-circle circle-two"></div>
+          <span class="mono">YOUR PHOTO / GRAPHIC</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact" data-section="contact">
+      <div class="contact-dark">
+        <div class="section-topline light">
+          <span class="mono">(04)</span>
+          <span class="mono">CONTACT</span>
+          <span class="mono">LET'S MAKE SOMETHING GOOD</span>
+        </div>
+      </div>
+
+      <div class="contact-lime">
+        <h2 class="contact-title">
+          <span>HAVE A PROJECT</span>
+          <span class="italic">IN MIND?</span>
+        </h2>
+
+        <a class="contact-link magnetic hover-target" href="mailto:hello@example.com">
+          START A CONVERSATION ↗
+        </a>
+
+        <div class="contact-bottom mono">
+          <span>LINKEDIN ↗</span>
+          <span>BEHANCE ↗</span>
+          <span>EMAIL ↗</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <template id="projectTemplate">
+    <article class="project-card hover-target">
+      <a class="project-link" href="#" target="_blank" rel="noreferrer">
+        <div class="project-media">
+          <img class="project-image" src="" alt="" />
+          <div class="project-placeholder"></div>
+          <span class="project-number mono"></span>
+          <span class="view-label mono">VIEW PROJECT ↗</span>
+        </div>
+
+        <div class="project-meta">
+          <div>
+            <h3 class="project-title"></h3>
+            <p class="project-category mono"></p>
+          </div>
+          <p class="project-year mono"></p>
+        </div>
+      </a>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
