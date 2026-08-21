@@ -563,3 +563,303 @@ main { transition:filter .2s ease; }
   .case-section { padding-top:60px; }
   .poster-pair { padding:10px; }
 }
+
+
+/* ===== Project 1 refinement: curated showcase ===== */
+.science-title {
+  white-space: nowrap;
+  font-size: clamp(50px, 7.2vw, 116px);
+  letter-spacing: -.07em;
+}
+
+.case-hero {
+  height: auto;
+  min-height: 0;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f7f4;
+}
+.case-hero img {
+  width: auto;
+  height: auto;
+  max-width: min(100%, 980px);
+  max-height: 78vh;
+  object-fit: contain;
+  object-position: center;
+}
+
+.featured-research {
+  padding-top: 72px;
+}
+.poster-showcase {
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: 24px;
+  align-items: stretch;
+}
+.poster-feature {
+  margin: 0;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.poster-feature img {
+  width: 100%;
+  height: 100%;
+  max-height: 1040px;
+  object-fit: contain;
+  display: block;
+}
+.poster-dark {
+  background: #080808;
+  padding: 20px;
+}
+.poster-light {
+  background: #f7f6f2;
+  padding: 20px;
+}
+
+.smart-overview {
+  margin: 24px 0 0;
+  background: #f6f6f2;
+  padding: 18px;
+}
+.smart-overview img {
+  width: 100%;
+  height: auto;
+  max-height: 760px;
+  object-fit: contain;
+  display: block;
+}
+
+.editorial-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+.editorial-strip figure {
+  margin: 0;
+}
+.editorial-strip img {
+  width: 100%;
+  height: auto;
+  max-height: 690px;
+  object-fit: contain;
+  display: block;
+  background: #f6f6f3;
+}
+.editorial-strip figcaption {
+  margin-top: 9px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+.worldcup-strip img {
+  max-height: 650px;
+}
+
+/* Keep custom cursor active and visible on project pages */
+.project-page,
+.project-page a {
+  cursor: none;
+}
+.project-page .cursor {
+  display: block;
+}
+.project-page .cursor-ring {
+  border-color: rgba(17,17,15,.65);
+}
+
+/* Homepage Project 1 image positioning */
+.project-card:first-child .project-image {
+  object-position: center 48%;
+}
+
+@media (max-width: 900px) {
+  .science-title {
+    white-space: normal;
+  }
+  .poster-showcase,
+  .editorial-strip {
+    grid-template-columns: 1fr;
+  }
+  .poster-feature {
+    min-height: 0;
+  }
+  .case-hero {
+    padding: 10px;
+  }
+  .case-hero img {
+    max-height: none;
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   PROJECT 1 — FINAL OVERRIDES
+   These rules intentionally come last and override older
+   experimental Project 1 rules.
+   ========================================================= */
+.project-page .project-detail.science-case-study {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding-top: 96px;
+}
+
+.project-page .project1-top {
+  display: block !important;
+  width: 100%;
+  padding: 12px 0 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.project-page .project1-title-row {
+  width: 100%;
+  overflow: visible;
+}
+
+.project-page .science-title {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 6px 0 0;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  font-size: clamp(52px, 6vw, 108px) !important;
+  line-height: .82 !important;
+  letter-spacing: -.075em !important;
+}
+
+.project-page .project1-top-bottom {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 36px;
+  align-items: end;
+}
+
+.project-page .project1-top-bottom .project-detail-sub {
+  margin: 0;
+  max-width: 680px;
+}
+
+.project-page .project1-top-bottom .project-detail-meta {
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Full poster visible: NO crop, NO fixed horizontal frame */
+.project-page .project1-hero-stage {
+  margin-top: 28px;
+  padding: 18px 18px 28px;
+  background: #e8e7e1;
+}
+
+.project-page .project1-hero-note {
+  margin: 0 0 14px;
+  text-align: right;
+}
+
+.project-page .case-hero.project1-hero {
+  margin: 0 auto !important;
+  width: min(100%, 860px) !important;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  overflow: visible !important;
+  background: transparent !important;
+}
+
+.project-page .case-hero.project1-hero img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+/* Curated poster-first showcase */
+.project-page .poster-showcase {
+  grid-template-columns: .82fr 1.18fr !important;
+  gap: 22px !important;
+  align-items: center !important;
+}
+.project-page .poster-feature {
+  min-height: 0 !important;
+}
+.project-page .poster-feature img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+}
+.project-page .poster-dark,
+.project-page .poster-light {
+  padding: 16px !important;
+}
+.project-page .smart-overview {
+  margin-top: 22px !important;
+}
+.project-page .smart-overview img {
+  max-height: none !important;
+}
+
+/* Smaller editorial rows; selective images only */
+.project-page .editorial-strip {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+}
+.project-page .editorial-strip figure {
+  padding: 12px;
+  background: #f4f3ee;
+}
+.project-page .editorial-strip img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 560px !important;
+  object-fit: contain !important;
+}
+.project-page .worldcup-strip img {
+  max-height: 520px !important;
+}
+
+/* Cursor must be visible on desktop Project 1 */
+@media (pointer: fine) {
+  .project-page,
+  .project-page a {
+    cursor: none !important;
+  }
+  .project-page .cursor {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .project-page .science-title {
+    white-space: normal !important;
+    font-size: clamp(48px, 13vw, 82px) !important;
+  }
+  .project-page .project1-top-bottom,
+  .project-page .poster-showcase,
+  .project-page .editorial-strip {
+    grid-template-columns: 1fr !important;
+  }
+  .project-page .project1-top-bottom .project-detail-meta {
+    text-align: left;
+    white-space: normal;
+  }
+  .project-page .case-hero.project1-hero {
+    width: min(100%, 620px) !important;
+  }
+}
