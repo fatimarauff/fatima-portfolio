@@ -12,8 +12,8 @@ const projects = [
     title: "Science, Made Visual",
     category: "SCIENTIFIC VISUALIZATION / EDITORIAL",
     year: "2026",
-    image: "",
-    link: "#"
+    image: "assets/images/project-1/drug-delivery-cover.png",
+    link: "project-1.html"
   },
   {
     number: "02",
@@ -21,7 +21,7 @@ const projects = [
     category: "BRAND IDENTITY / DIGITAL",
     year: "2026",
     image: "",
-    link: "#"
+    link: "project-2.html"
   },
   {
     number: "03",
@@ -29,7 +29,7 @@ const projects = [
     category: "DESIGN SYSTEM / COMMUNICATION",
     year: "2026",
     image: "",
-    link: "#"
+    link: "project-3.html"
   },
   {
     number: "04",
@@ -37,7 +37,7 @@ const projects = [
     category: "SCIENCE / STORYTELLING",
     year: "2026",
     image: "",
-    link: "#"
+    link: "project-4.html"
   }
 ];
 
@@ -71,7 +71,7 @@ projects.forEach((project) => {
 // Header blur
 const header = document.getElementById("siteHeader");
 const updateHeader = () => {
-  header.classList.toggle("scrolled", window.scrollY > 32);
+  if (header) header.classList.toggle("scrolled", window.scrollY > 32);
 };
 updateHeader();
 window.addEventListener("scroll", updateHeader, { passive: true });

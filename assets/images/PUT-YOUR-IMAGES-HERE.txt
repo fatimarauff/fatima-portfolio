@@ -1,0 +1,1 @@
+Add your project JPG/PNG/WEBP files in this folder, then reference them in script.js.
