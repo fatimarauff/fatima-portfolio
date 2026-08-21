@@ -20,7 +20,7 @@ const projects = [
     title: "Synaptix Studio",
     category: "BRAND IDENTITY / DIGITAL",
     year: "2026",
-    image: "assets/images/project-2/synaptix-office.png",
+    image: "project-2/synaptix-office.png",
     link: "project-2.html"
   },
   {
